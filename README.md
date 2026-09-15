@@ -134,6 +134,12 @@ While SQL Developer only styles the code editor by default, you can modernize th
    ```
 4. Restart SQL Developer.
 
+> [!WARNING]
+> **Potential Visual Glitches & Compatibility Notice**:  
+> Injecting a third-party Look & Feel like FlatLaf is an unofficial customization. Because Oracle SQL Developer relies on many legacy and proprietary Swing components, there is a risk of **broken images, missing icons, or layout artifacts** across various dialogs and menus (the full extent of affected views is currently unknown).  
+> - If you encounter minor broken icons, restarting SQL Developer may occasionally help reload internal caches.  
+> - If you encounter visual glitches that hinder your workflow, you can easily revert to the stock look at any time by removing the three added lines from `sqldeveloper.conf` and restarting.
+
 ---
 
 <a name="繁體中文"></a>
@@ -265,6 +271,12 @@ Oracle SQL Developer 預設僅能自訂程式碼編輯區的語法色彩，但�
    AddVMOption -Dswing.defaultlaf=com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme
    ```
 4. 儲存並重新啟動 SQL Developer。
+
+> [!WARNING]
+> **外觀修改風險與相容性提醒**：  
+> 掛載第三方 FlatLaf 屬於非官方的進階美化方式。由於 Oracle SQL Developer 內部包含大量專屬的 Swing 元件，修改後部分視窗、對話框或選單可能存在**破圖、圖示遺失或排版微跑版**的潛在風險（目前尚未完全探明所有可能受影響的實際功能與情境）。  
+> - 若遇到圖示抓取異常，有時再次重啟軟體讓快取重新載入即可改善。  
+> - 若遇到嚴重視覺異常或不習慣，隨時只需將 `sqldeveloper.conf` 中新增的這三行設定刪除並重啟，即可立刻復原為官方預設外觀。
 
 ---
 
