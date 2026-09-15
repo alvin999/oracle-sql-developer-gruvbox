@@ -19,17 +19,17 @@
 
 | Syntax Element | Gruvbox Dark | Gruvbox Soft Dark | Role in Syntax |
 | :--- | :--- | :--- | :--- |
-| **Background** | `#282828` | `#32302f` | Editor background |
-| **Foreground** | `#ebdbb2` | `#e0cda5` | Plain text, identifiers |
-| **Red** | `#fb4934` | `#f3594b` | Keywords, attribute names |
-| **Green** | `#b8bb26` | `#b1b946` | Strings, additions |
-| **Yellow** | `#fabd2f` | `#e9b243` | Elements, constants, headers |
-| **Orange** | `#fe8019` | `#f38534` | Operators, braces, delimiters |
-| **Purple** | `#d3869b` | `#d3869b` | Numbers, units |
-| **Gray** | `#928374` | `#928374` | Comments, unused text |
-| **Dark Red** | `#cc241d` | `#cc241d` | Errors, deletions |
-| **Selection** | `#504945` | `#504945` | Selection & highlight background |
-| **Caret Line** | `#3c3836` | `#3c3836` | Current line highlight background |
+| **Background** | ![](./assets/swatches/282828.svg) `#282828` | ![](./assets/swatches/32302f.svg) `#32302f` | Editor background |
+| **Foreground** | ![](./assets/swatches/ebdbb2.svg) `#ebdbb2` | ![](./assets/swatches/e0cda5.svg) `#e0cda5` | Plain text, identifiers |
+| **Red** | ![](./assets/swatches/fb4934.svg) `#fb4934` | ![](./assets/swatches/f3594b.svg) `#f3594b` | Keywords, attribute names |
+| **Green** | ![](./assets/swatches/b8bb26.svg) `#b8bb26` | ![](./assets/swatches/b1b946.svg) `#b1b946` | Strings, additions |
+| **Yellow** | ![](./assets/swatches/fabd2f.svg) `#fabd2f` | ![](./assets/swatches/e9b243.svg) `#e9b243` | Elements, constants, headers |
+| **Orange** | ![](./assets/swatches/fe8019.svg) `#fe8019` | ![](./assets/swatches/f38534.svg) `#f38534` | Operators, braces, delimiters |
+| **Purple** | ![](./assets/swatches/d3869b.svg) `#d3869b` | ![](./assets/swatches/d3869b.svg) `#d3869b` | Numbers, units |
+| **Gray** | ![](./assets/swatches/928374.svg) `#928374` | ![](./assets/swatches/928374.svg) `#928374` | Comments, unused text |
+| **Dark Red** | ![](./assets/swatches/cc241d.svg) `#cc241d` | ![](./assets/swatches/cc241d.svg) `#cc241d` | Errors, deletions |
+| **Selection** | ![](./assets/swatches/504945.svg) `#504945` | ![](./assets/swatches/504945.svg) `#504945` | Selection & highlight background |
+| **Caret Line** | ![](./assets/swatches/3c3836.svg) `#3c3836` | ![](./assets/swatches/3c3836.svg) `#3c3836` | Current line highlight background |
 
 ### Installation
 
@@ -127,17 +127,17 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 
 | 語法元素 | Gruvbox Dark (標準) | Gruvbox Soft Dark (柔和) | 說明 |
 | :--- | :--- | :--- | :--- |
-| **背景 (Background)** | `#282828` | `#32302f` | 編輯器底色 |
-| **前景文字 (Foreground)** | `#ebdbb2` | `#e0cda5` | 一般文字、識別碼 (Identifier) |
-| **紅色 (Red)** | `#fb4934` | `#f3594b` | 關鍵字 (Keyword)、屬性名稱 |
-| **綠色 (Green)** | `#b8bb26` | `#b1b946` | 字串 (String)、新增內容 |
-| **黃色 (Yellow)** | `#fabd2f` | `#e9b243` | 元素標籤、常數 (Constant)、標題 |
-| **橘色 (Orange)** | `#fe8019` | `#f38534` | 運算子 (Operator)、括號 (Brace)、分隔符 |
-| **紫色 (Purple)** | `#d3869b` | `#d3869b` | 數值 (Number)、單位 |
-| **灰色 (Gray)** | `#928374` | `#928374` | 註解 (Comment)、廢棄項目 |
-| **深紅 (Dark Red)** | `#cc241d` | `#cc241d` | 語法錯誤 (Error)、刪除內容 |
-| **選取底色 (Selection)** | `#504945` | `#504945` | 文字選取區塊、符號高亮底色 |
-| **當前行 (Caret Line)** | `#3c3836` | `#3c3836` | 游標所在行底色高亮 |
+| **背景 (Background)** | ![](./assets/swatches/282828.svg) `#282828` | ![](./assets/swatches/32302f.svg) `#32302f` | 編輯器底色 |
+| **前景文字 (Foreground)** | ![](./assets/swatches/ebdbb2.svg) `#ebdbb2` | ![](./assets/swatches/e0cda5.svg) `#e0cda5` | 一般文字、識別碼 (Identifier) |
+| **紅色 (Red)** | ![](./assets/swatches/fb4934.svg) `#fb4934` | ![](./assets/swatches/f3594b.svg) `#f3594b` | 關鍵字 (Keyword)、屬性名稱 |
+| **綠色 (Green)** | ![](./assets/swatches/b8bb26.svg) `#b8bb26` | ![](./assets/swatches/b1b946.svg) `#b1b946` | 字串 (String)、新增內容 |
+| **黃色 (Yellow)** | ![](./assets/swatches/fabd2f.svg) `#fabd2f` | ![](./assets/swatches/e9b243.svg) `#e9b243` | 元素標籤、常數 (Constant)、標題 |
+| **橘色 (Orange)** | ![](./assets/swatches/fe8019.svg) `#fe8019` | ![](./assets/swatches/f38534.svg) `#f38534` | 運算子 (Operator)、括號 (Brace)、分隔符 |
+| **紫色 (Purple)** | ![](./assets/swatches/d3869b.svg) `#d3869b` | ![](./assets/swatches/d3869b.svg) `#d3869b` | 數值 (Number)、單位 |
+| **灰色 (Gray)** | ![](./assets/swatches/928374.svg) `#928374` | ![](./assets/swatches/928374.svg) `#928374` | 註解 (Comment)、廢棄項目 |
+| **深紅 (Dark Red)** | ![](./assets/swatches/cc241d.svg) `#cc241d` | ![](./assets/swatches/cc241d.svg) `#cc241d` | 語法錯誤 (Error)、刪除內容 |
+| **選取底色 (Selection)** | ![](./assets/swatches/504945.svg) `#504945` | ![](./assets/swatches/504945.svg) `#504945` | 文字選取區塊、符號高亮底色 |
+| **當前行 (Caret Line)** | ![](./assets/swatches/3c3836.svg) `#3c3836` | ![](./assets/swatches/3c3836.svg) `#3c3836` | 游標所在行底色高亮 |
 
 ### 安裝步驟
 
