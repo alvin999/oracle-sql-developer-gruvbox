@@ -112,6 +112,30 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 
 ---
 
+### Advanced: UI Look & Feel Customization (FlatLaf)
+
+While SQL Developer only styles the code editor by default, you can modernize the entire application frame (menus, toolbars, sidebars) by injecting **[FlatLaf](https://github.com/JFormDesigner/FlatLaf)**.
+
+> [!TIP]
+> **Why a light UI theme for the outer frame?**  
+> In Oracle SQL Developer's Swing interface, certain tab labels and text elements are hardcoded in black (`#000000`). If a full-dark Look & Feel is applied, these tab titles can become difficult to read due to poor contrast.  
+> A proven solution is pairing a clean, light FlatLaf theme (such as **FlatSolarizedLightIJTheme**) for the outer UI with the dark **Gruvbox** code editor. This ensures all tab titles remain crystal clear while providing a sleek, modern, flat application frame!
+
+#### Setup Steps:
+
+1. Download **`flatlaf-<version>.jar`** and **`flatlaf-intellij-themes-<version>.jar`** from [Maven Central](https://repo1.maven.org/maven2/com/formdev/) (replace `<version>` with the latest release, e.g. `3.7.2` or newer).
+2. Place both JAR files in `<SQL_Developer_Directory>/sqldeveloper/lib/`.
+3. Open `<SQL_Developer_Directory>/sqldeveloper/bin/sqldeveloper.conf` and append the following lines (replace `<version>` with your actual downloaded version number):
+   ```conf
+   AddJavaLibFile ../lib/flatlaf-<version>.jar
+   AddJavaLibFile ../lib/flatlaf-intellij-themes-<version>.jar
+   # FlatSolarizedLightIJTheme is recommended, or replace with your preferred theme
+   AddVMOption -Dswing.defaultlaf=com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme
+   ```
+4. Restart SQL Developer.
+
+---
+
 <a name="繁體中文"></a>
 ## 繁體中文
 
@@ -217,6 +241,30 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
   - 檢查 XML 標籤是否完整閉合，且 `<Item>...</Item>` 確實放置於 `<schemeMap>` 之內。
 - **存在多個版本目錄**：
   - 若曾升級過 SQL Developer，`%APPDATA%` 或 `~/.sqldeveloper` 中可能存在多個 `system<版本號>` 資料夾，請確認修改的是您目前正在執行的版本目錄。
+
+---
+
+### 進階技巧：應用程式外框 UI 美化 (FlatLaf)
+
+Oracle SQL Developer 預設僅能自訂程式碼編輯區的語法色彩，但若想讓軟體外框（頂端選單、工具列、側邊欄）也擁有現代化的扁平化質感，可透過掛載 **[FlatLaf](https://github.com/JFormDesigner/FlatLaf)** 來達成。
+
+> [!TIP]
+> **為什麼推薦外框使用淺色主題？**  
+> 在 Oracle SQL Developer 的 Swing 介面中，部分工作表與分頁標籤（Tab）的文字顏色被程式寫死為黑色（`#000000`）。若強制將外框套用全深色 Look & Feel，會導致標籤文字因對比不足而難以閱讀。  
+> 實務上推薦搭配淺色現代主題（如 **FlatSolarizedLightIJTheme**），既能享受扁平俐落的外框，又可確保所有分頁標籤清晰可見，並完美襯托暗色的 Gruvbox 編輯區！
+
+#### 設定步驟：
+
+1. 前往 [Maven Central](https://repo1.maven.org/maven2/com/formdev/) 下載 **`flatlaf-<版本號>.jar`** 與 **`flatlaf-intellij-themes-<版本號>.jar`**（建議下載最新穩定版本，例如 `3.7.2` 或更高版本）。
+2. 將這兩個 `.jar` 檔案複製到 `<SQL_Developer安裝目錄>\sqldeveloper\lib\` 資料夾內。
+3. 用文字編輯器開啟 `<SQL_Developer安裝目錄>\sqldeveloper\bin\sqldeveloper.conf`，於檔案最末端加入以下設定（請將 `<版本號>` 替換為實際下載的檔案名稱）：
+   ```conf
+   AddJavaLibFile ../lib/flatlaf-<版本號>.jar
+   AddJavaLibFile ../lib/flatlaf-intellij-themes-<版本號>.jar
+   # 推薦使用 FlatSolarizedLightIJTheme，亦可替換為其他想要的主題
+   AddVMOption -Dswing.defaultlaf=com.formdev.flatlaf.intellijthemes.FlatSolarizedLightIJTheme
+   ```
+4. 儲存並重新啟動 SQL Developer。
 
 ---
 
