@@ -60,24 +60,45 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 #### 2. Insert Gruvbox Scheme
 
 1. Open `dtcache.xml` with a text editor (e.g., VS Code, Notepad++).
-2. Search for `<hash n="oracle.ide.ceditor.options.S2Options">`.
-3. Inside this block, locate `<list n="customColorSchemes">`:
-   - Paste the contents of [`Gruvbox-Dark.xml`](./Gruvbox-Dark.xml) (Medium, `#282828`) and/or [`Gruvbox-Soft-Dark.xml`](./Gruvbox-Soft-Dark.xml) (Soft, `#32302f`) inside `<list>`. *(You can paste both to switch between them!)*
-   - If `<list n="customColorSchemes">` does **not** exist yet, add it inside `<hash n="oracle.ide.ceditor.options.S2Options">` like so:
-     ```xml
-     <list n="customColorSchemes">
-        <!-- Paste the content of Gruvbox-Dark.xml here -->
-     </list>
-     ```
+2. Search for the `<schemeMap>` tag (located under `<Key>SyntaxSchemes</Key>` near the top of the file).
+3. Paste the contents of [`Gruvbox-Dark.xml`](./Gruvbox-Dark.xml) and/or [`Gruvbox-Soft-Dark.xml`](./Gruvbox-Soft-Dark.xml) inside `<schemeMap>` (alongside built-in themes such as `Classic` or `Twilight`):
+   ```xml
+   <dt-cache class="java.util.HashMap" xmlns="http://xmlns.oracle.com/jdeveloper/110000/dt-cache">
+      <Item>
+         <Key>SyntaxSchemes</Key>
+         <Value class="oracle.ide.ceditor.options.SyntaxSchemes">
+            <schemeMap>
+               <!-- Existing built-in themes (Classic, Default, etc.) -->
+               <Item>
+                  <Key>Classic</Key>
+                  ...
+               </Item>
+
+               <!-- Paste Gruvbox <Item> blocks here (you can include both!) -->
+               <Item>
+                  <Key>Gruvbox Dark</Key>
+                  ...
+               </Item>
+               <Item>
+                  <Key>Gruvbox Soft Dark</Key>
+                  ...
+               </Item>
+            </schemeMap>
+         </Value>
+      </Item>
+   </dt-cache>
+   ```
 4. Save and close `dtcache.xml`.
 
 #### 3. Activate the Theme
 
 1. Launch **Oracle SQL Developer**.
-2. Navigate to **Tools** > **Preferences**.
-3. In the sidebar, expand **Code Editor** and select **PL/SQL Syntax Colors**.
-4. In the **Scheme** dropdown menu, choose **Gruvbox**.
-5. Click **OK** to apply.
+2. Navigate to **Tools** > **Preferences** (工具 > 偏好設定).
+3. In the left panel, expand **Code Editor** (程式碼編輯器) and select **PL/SQL Syntax Colors** (PL/SQL 語法色彩).
+4. In the **Scheme** (配置) dropdown menu, choose **Gruvbox Dark** or **Gruvbox Soft Dark**.
+5. Click **OK** (確定) to apply.
+
+![Preferences Setting](./screenshots/setting.png)
 
 ---
 
@@ -85,7 +106,7 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 
 - **Theme doesn't appear in the dropdown**:
   - Make sure SQL Developer was completely closed before modifying `dtcache.xml`.
-  - Verify that `<Item>` and `</Item>` tags were correctly pasted inside `<list n="customColorSchemes">` without breaking XML hierarchy.
+  - Verify that `<Item>` and `</Item>` tags were correctly pasted inside `<schemeMap>` without breaking XML hierarchy.
 - **Multiple version folders**:
   - If you upgraded SQL Developer previously, multiple `system<version>` folders might exist in `%APPDATA%` or `~/.sqldeveloper`. Make sure you are modifying the one corresponding to the version you are currently launching.
 
@@ -147,24 +168,45 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 #### 2. 插入 Gruvbox 主題設定
 
 1. 使用文字編輯器（如 VS Code、Notepad++ 等）開啟 `dtcache.xml`。
-2. 搜尋標籤 `<hash n="oracle.ide.ceditor.options.S2Options">`。
-3. 在此區塊內找到 `<list n="customColorSchemes">`：
-   - 將 [`Gruvbox-Dark.xml`](./Gruvbox-Dark.xml)（標準 `#282828`）或 [`Gruvbox-Soft-Dark.xml`](./Gruvbox-Soft-Dark.xml)（柔和 `#32302f`）的內容貼入 `<list>` 標籤內。*(亦可兩者皆貼入，便於日後在偏好設定中隨時切換)*
-   - 若尚未存在 `<list n="customColorSchemes">`，請在 `<hash n="oracle.ide.ceditor.options.S2Options">` 內部新增此清單標籤：
-     ```xml
-     <list n="customColorSchemes">
-        <!-- 在此貼上 Gruvbox-Dark.xml 的全部內容 -->
-     </list>
-     ```
+2. 搜尋標籤 **`<schemeMap>`**（位於檔案頂部 `<Key>SyntaxSchemes</Key>` 區塊內）。
+3. 將 [`Gruvbox-Dark.xml`](./Gruvbox-Dark.xml) 或 [`Gruvbox-Soft-Dark.xml`](./Gruvbox-Soft-Dark.xml) 的完整內容貼入 `<schemeMap>` 與 `</schemeMap>` 標籤之間（可接在現有內建主題的 `</Item>` 之後）：
+   ```xml
+   <dt-cache class="java.util.HashMap" xmlns="http://xmlns.oracle.com/jdeveloper/110000/dt-cache">
+      <Item>
+         <Key>SyntaxSchemes</Key>
+         <Value class="oracle.ide.ceditor.options.SyntaxSchemes">
+            <schemeMap>
+               <!-- 現有內建主題 (Classic, Default 等) -->
+               <Item>
+                  <Key>Classic</Key>
+                  ...
+               </Item>
+
+               <!-- 在此貼入 Gruvbox 主題的 <Item> 區塊 (亦可兩者皆貼入) -->
+               <Item>
+                  <Key>Gruvbox Dark</Key>
+                  ...
+               </Item>
+               <Item>
+                  <Key>Gruvbox Soft Dark</Key>
+                  ...
+               </Item>
+            </schemeMap>
+         </Value>
+      </Item>
+   </dt-cache>
+   ```
 4. 儲存並關閉 `dtcache.xml`。
 
 #### 3. 啟用主題
 
 1. 啟動 **Oracle SQL Developer**。
 2. 點擊頂端選單 **工具 (Tools)** > **偏好設定 (Preferences)**。
-3. 在左側清單展開 **程式碼編輯器 (Code Editor)**，點選 **PL/SQL 語法顏色 (PL/SQL Syntax Colors)**。
-4. 在右側的 **色彩配置 (Scheme)** 下拉選單中，選擇 **Gruvbox**。
+3. 在左側清單展開 **程式碼編輯器 (Code Editor)**，點選 **PL/SQL 語法色彩 (PL/SQL Syntax Colors)**。
+4. 在右側的 **配置 (Scheme)** 下拉選單中，選擇 **Gruvbox Dark** 或 **Gruvbox Soft Dark**。
 5. 點擊 **確定 (OK)** 即完成套用。
+
+![偏好設定截圖](./screenshots/setting.png)
 
 ---
 
@@ -172,7 +214,7 @@ Find the `dtcache.xml` file in your SQL Developer settings folder:
 
 - **下拉選單未出現 Gruvbox**：
   - 請確認修改 `dtcache.xml` 前，SQL Developer 是否已確實完全關閉。
-  - 檢查 XML 標籤是否完整閉合，且 `<Item>...</Item>` 確實放置於 `<list n="customColorSchemes">` 之內。
+  - 檢查 XML 標籤是否完整閉合，且 `<Item>...</Item>` 確實放置於 `<schemeMap>` 之內。
 - **存在多個版本目錄**：
   - 若曾升級過 SQL Developer，`%APPDATA%` 或 `~/.sqldeveloper` 中可能存在多個 `system<版本號>` 資料夾，請確認修改的是您目前正在執行的版本目錄。
 
